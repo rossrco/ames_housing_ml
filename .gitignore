@@ -130,3 +130,6 @@ dmypy.json
 
 # Configuration
 service_account_key.json
+
+# VS Code artifacts
+.vscode
