@@ -4,6 +4,7 @@ import argparse
 
 
 def train(**args):
+    print('Training...')
     pass
 
 
