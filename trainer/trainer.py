@@ -9,7 +9,7 @@ import argparse
 
 
 def train(**args):
-    print('Extracting data.')
+    print('Ingesting data.')
     client = storage.Client()
     bucket = client.get_bucket('ames-house-dataset')
     blob = storage.Blob('train.csv', bucket)
