@@ -14,10 +14,12 @@ def get_raw_data_spec(df):
     d_no_nulls = df.dtypes[df.isna().sum() == 0]
 
     d_with_nulls_cat = d_with_nulls[d_with_nulls == np.dtype('O')]
-    d_with_nulls_num = d_with_nulls[d_with_nulls.isin([np.int64, np.float64])]
+    d_with_nulls_num = d_with_nulls[d_with_nulls.isin([np.dtype('int64'),
+                                                       np.dtype('float64')])]
 
     d_no_nulls_cat = d_no_nulls[d_no_nulls == np.dtype('O')]
-    d_no_nulls_num = d_no_nulls[d_no_nulls.isin([np.int64, np.float64])]
+    d_no_nulls_num = d_no_nulls[d_no_nulls.isin([np.dtype('int64'),
+                                                 np.dtype('float64')])]
 
     OPT_CAT_FEATURES = d_with_nulls_cat.index.to_list()
     OPT_NUM_FEATURES = d_with_nulls_num.index.to_list()
